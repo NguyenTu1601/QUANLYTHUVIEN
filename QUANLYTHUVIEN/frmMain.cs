@@ -134,6 +134,11 @@ namespace QUANLYTHUVIEN
             Form NV = new frmNhanVien();
             NV.ShowDialog();
         }
+        private void pictureBox13_Click(object sender, EventArgs e)
+        {
+            Form Muon = new frmMuonSach();
+            Muon.ShowDialog();
+        }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
@@ -189,10 +194,50 @@ namespace QUANLYTHUVIEN
             NV.ShowDialog();
         }
 
-        private void pictureBox13_Click(object sender, EventArgs e)
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Form NV = new frmNhanVien();
+            NV.ShowDialog();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Form DG = new frmDocGia();
+            DG.ShowDialog();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Form DMS = new frmDanhMucSach();
+            DMS.ShowDialog();
+        }
+
+        private void label9_Click(object sender, EventArgs e)
         {
             Form Muon = new frmMuonSach();
             Muon.ShowDialog();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            Form TLS = new frmTheLoai();
+            TLS.ShowDialog();
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            Form Tra = new frmTraSach();
+            Tra.ShowDialog();
+        }
+
+        private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialog == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

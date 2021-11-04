@@ -31,9 +31,7 @@ namespace QUANLYTHUVIEN
 
         private void frmDangNhap_Load(object sender, EventArgs e)
         {
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
-            this.Height = 435;
-            txtID.Focus();
+            //txtID.Focus();
         }
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
@@ -55,7 +53,7 @@ namespace QUANLYTHUVIEN
                     BLDangNhap.username = txtID.Text;
                     BLDangNhap.password = txtPass.Text;
                     //
-                    MessageBox.Show("Xin chào " + txtID.Text + "! Bạn đã đăng nhập thành công!", "Thông báo");
+                    MessageBox.Show("Xin chào " + txtID.Text + "! \nBạn đã đăng nhập thành công!", "Thông báo");
                     this.Hide();
                     DataTable ktra = blDN.KTraPhanQUyen(this.txtID.Text, ref err);
                     if(ktra.Rows.Count>0)
@@ -135,6 +133,27 @@ namespace QUANLYTHUVIEN
         private void lbDangNhap_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Height = 751;
+        }
+
+        private void txtID_Click(object sender, EventArgs e)
+        {
+            pictureUser.BackgroundImage = Properties.Resources.iconUser;
+            txtID.Text = "";
+            pictureBox2.BackColor = Color.Blue;
+
+            picturePass.BackgroundImage = Properties.Resources.icon_pass_white;
+            pictureBox4.BackColor = Color.White;
+        }
+
+        private void txtPass_Click(object sender, EventArgs e)
+        {
+            picturePass.BackgroundImage = Properties.Resources.icon_pass;
+            txtPass.Text = "";
+            pictureBox4.BackColor = Color.Blue;
+            txtPass.PasswordChar = '*';
+
+            pictureUser.BackgroundImage = Properties.Resources.icon_user_white;
+            pictureBox2.BackColor = Color.White;
         }
     }
 }
