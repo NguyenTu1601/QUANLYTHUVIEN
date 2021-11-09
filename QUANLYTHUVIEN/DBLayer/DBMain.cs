@@ -119,31 +119,31 @@ namespace QUANLYTHUVIEN.DBLayer
         }
 
         // Kieu query tra ve mot doi tuong/mot gia tri
-        //public object ExecuteScalar(string strSQL, CommandType ct, params SqlParameter[] param)
-        //{
-        //    object data = null;
+        public object ExecuteScalar(string strSQL, CommandType ct, params SqlParameter[] param)
+        {
+            object data = null;
 
-        //    conn.Open();
-        //    comm.Parameters.Clear();
-        //    comm.CommandText = strSQL;
-        //    comm.CommandType = ct;
-        //    foreach (SqlParameter p in param)
-        //        comm.Parameters.Add(p);
-        //    try
-        //    {
-        //        data = comm.ExecuteScalar();
-        //    }
-        //    catch (SqlException)
-        //    {
+            conn.Open();
+            comm.Parameters.Clear();
+            comm.CommandText = strSQL;
+            comm.CommandType = ct;
+            foreach (SqlParameter p in param)
+                comm.Parameters.Add(p);
+            try
+            {
+                data = comm.ExecuteScalar();
+            }
+            catch (SqlException)
+            {
 
-        //    }
-        //    finally
-        //    {
-        //        conn.Close();
-        //    }
+            }
+            finally
+            {
+                conn.Close();
+            }
 
-        //    return data;
-        //}
+            return data;
+        }
 
     }
 }
