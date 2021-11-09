@@ -33,10 +33,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtUserName = new System.Windows.Forms.TextBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
+            this.txtRePass = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -77,6 +79,7 @@
             this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnHuy
             // 
@@ -86,38 +89,55 @@
             this.btnHuy.TabIndex = 4;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
-            // textBox1
+            // txtUserName
             // 
-            this.textBox1.Location = new System.Drawing.Point(180, 153);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(240, 25);
-            this.textBox1.TabIndex = 5;
+            this.txtUserName.Location = new System.Drawing.Point(180, 153);
+            this.txtUserName.Multiline = true;
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(240, 25);
+            this.txtUserName.TabIndex = 5;
+            this.txtUserName.TextChanged += new System.EventHandler(this.txtUserName_TextChanged);
             // 
-            // textBox2
+            // txtPass
             // 
-            this.textBox2.Location = new System.Drawing.Point(180, 198);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(240, 25);
-            this.textBox2.TabIndex = 6;
+            this.txtPass.Location = new System.Drawing.Point(180, 206);
+            this.txtPass.Multiline = true;
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(240, 25);
+            this.txtPass.TabIndex = 6;
+            this.txtPass.TextChanged += new System.EventHandler(this.txtPass_TextChanged);
             // 
-            // textBox3
+            // txtRePass
             // 
-            this.textBox3.Location = new System.Drawing.Point(180, 256);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(240, 25);
-            this.textBox3.TabIndex = 7;
+            this.txtRePass.Location = new System.Drawing.Point(180, 256);
+            this.txtRePass.Multiline = true;
+            this.txtRePass.Name = "txtRePass";
+            this.txtRePass.Size = new System.Drawing.Size(240, 25);
+            this.txtRePass.TabIndex = 7;
+            this.txtRePass.TextChanged += new System.EventHandler(this.txtRePass_TextChanged);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Pink;
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(627, 88);
             this.panel1.TabIndex = 8;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(205, 31);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(174, 25);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "THÊM TÀI KHOẢN";
             // 
             // frmAddUser
             // 
@@ -126,9 +146,9 @@
             this.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.ClientSize = new System.Drawing.Size(651, 410);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtRePass);
+            this.Controls.Add(this.txtPass);
+            this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.label3);
@@ -137,6 +157,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAddUser";
             this.Text = "frmAddUser";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,9 +171,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnHuy;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtUserName;
+        private System.Windows.Forms.TextBox txtPass;
+        private System.Windows.Forms.TextBox txtRePass;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label4;
     }
 }
