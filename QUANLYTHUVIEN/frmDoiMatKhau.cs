@@ -69,6 +69,8 @@ namespace QUANLYTHUVIEN
                             else
                             {
                                 MessageBox.Show("Bạn nhập lại mật khẩu không đúng");
+                                txtXacNhanMatKhau.Text = "";
+                                txtXacNhanMatKhau.Focus();
                             }
                         }
                     }
@@ -90,7 +92,7 @@ namespace QUANLYTHUVIEN
         private void frmDoiMatKhau_Load(object sender, EventArgs e)
         {
             txtTaiKhoan.Text = BLDangNhap.username;
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = FormBorderStyle.None;
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)

@@ -251,10 +251,10 @@ namespace QUANLYTHUVIEN
 
         }
 
-        private void đổiMậtKhẩuToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void doiMatKhauToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Form doiPass = new frmDoiMatKhau();
-            doiPass.ShowDialog();
+            Form DoiPass = new frmDoiMatKhau();
+            DoiPass.ShowDialog();
         }
     }
 }
