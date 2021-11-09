@@ -59,6 +59,7 @@
     <Compile Include="BSLayer\BLMuonSach.cs" />
     <Compile Include="BSLayer\BLNhanVien.cs" />
     <Compile Include="BSLayer\BLTheLoai.cs" />
+    <Compile Include="BSLayer\BLThemUser.cs" />
     <Compile Include="BSLayer\BLTraSach.cs" />
     <Compile Include="DBLayer\DBMain.cs" />
     <Compile Include="frmAddUser.cs">

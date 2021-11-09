@@ -40,19 +40,19 @@ namespace QUANLYTHUVIEN
             {
                 if(txtPass.Text == "")
                 {
-
+                    MessageBox.Show("Vui Lòng nhập mật khẩu!", "Thông báo", MessageBoxButtons.OK);
                 }
                 else
                 {
                     if(txtRePass.Text == "")
                     {
-                        
+                        MessageBox.Show("Vui Lòng nhập lại mật khẩu!", "Thông báo", MessageBoxButtons.OK);
                     }
                     else
                     {
                         if(txtPass.Text != txtRePass.Text)
                         {
-
+                            MessageBox.Show("Mật khẩu không khớp!", "Thông báo", MessageBoxButtons.OK);
                         }
                         else
                         {
@@ -62,6 +62,23 @@ namespace QUANLYTHUVIEN
                 }
             }
 
+        }
+        //ktra user đã có chưa
+        private bool ktraUser()
+        {
+            bool f = true;
+
+
+
+            return f;
+        }
+
+        private void addNewUser(ref string err)
+        {
+            string sqlString = "Insert Into User(ID,Password,PhanQuyen) Values(" + "'" +
+                txtUserName + "','" +
+                txtRePass + "','1')";
+            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
 
         private void txtPass_TextChanged(object sender, EventArgs e)

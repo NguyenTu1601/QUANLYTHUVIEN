@@ -10,7 +10,7 @@ using System.Data;
 
 namespace QUANLYTHUVIEN.DBLayer
 {
-    class DBMain
+    public class DBMain
     {
         string ConnStr = @"Data Source=DESKTOP-R5G0N9R\NGUYENTU;Initial Catalog=QuanLyThuVien;Integrated Security=True";
         SqlConnection conn = null;
