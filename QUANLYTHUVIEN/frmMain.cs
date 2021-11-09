@@ -256,5 +256,10 @@ namespace QUANLYTHUVIEN
             Form DoiPass = new frmDoiMatKhau();
             DoiPass.ShowDialog();
         }
+
+        private void xoaUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

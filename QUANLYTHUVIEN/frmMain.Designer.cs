@@ -40,7 +40,7 @@
             this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tàiKhoảnToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.addUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xóaTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xoaUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -197,7 +197,7 @@
             // 
             this.tàiKhoảnToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addUserToolStripMenuItem,
-            this.xóaTàiKhoảnToolStripMenuItem});
+            this.xoaUserToolStripMenuItem});
             this.tàiKhoảnToolStripMenuItem1.Name = "tàiKhoảnToolStripMenuItem1";
             this.tàiKhoảnToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.tàiKhoảnToolStripMenuItem1.Text = "Tài khoản";
@@ -209,11 +209,12 @@
             this.addUserToolStripMenuItem.Text = "Thêm tài khoản";
             this.addUserToolStripMenuItem.Click += new System.EventHandler(this.addUserToolStripMenuItem_Click);
             // 
-            // xóaTàiKhoảnToolStripMenuItem
+            // xoaUserToolStripMenuItem
             // 
-            this.xóaTàiKhoảnToolStripMenuItem.Name = "xóaTàiKhoảnToolStripMenuItem";
-            this.xóaTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.xóaTàiKhoảnToolStripMenuItem.Text = "Xóa tài khoản";
+            this.xoaUserToolStripMenuItem.Name = "xoaUserToolStripMenuItem";
+            this.xoaUserToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.xoaUserToolStripMenuItem.Text = "Xóa tài khoản";
+            this.xoaUserToolStripMenuItem.Click += new System.EventHandler(this.xoaUserToolStripMenuItem_Click);
             // 
             // panel1
             // 
@@ -512,7 +513,7 @@
         private System.Windows.Forms.ToolStripMenuItem adminToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tàiKhoảnToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem addUserToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem xóaTàiKhoảnToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem xoaUserToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem doiMatKhauToolStripMenuItem1;
     }
 }
