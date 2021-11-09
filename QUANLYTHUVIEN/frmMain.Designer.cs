@@ -111,7 +111,7 @@
             this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(53, 12);
+            this.label4.Location = new System.Drawing.Point(51, 11);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(145, 25);
             this.label4.TabIndex = 12;
