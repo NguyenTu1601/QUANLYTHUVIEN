@@ -21,6 +21,7 @@ namespace QUANLYTHUVIEN
         public string log1;
         public frmMain(int x)
         {
+            // 0 la admin
             InitializeComponent();
             if (x == 1)
             {
@@ -243,6 +244,12 @@ namespace QUANLYTHUVIEN
         private void addUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void đổiMậtKhẩuToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Form doiPass = new frmDoiMatKhau();
+            doiPass.ShowDialog();
         }
     }
 }
