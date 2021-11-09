@@ -26,9 +26,14 @@ namespace QUANLYTHUVIEN
             if (x == 1)
             {
                 panel1.Enabled = false;
+                adminToolStripMenuItem.Enabled = false;
                 //panel1.ForeColor = Color.Black;
             }
-            else panel1.Enabled = true;
+            else
+            {
+                panel1.Enabled = true;
+                adminToolStripMenuItem.Enabled = true;
+            }
         }
         //public frmMain(string user, string pass)
         //{
