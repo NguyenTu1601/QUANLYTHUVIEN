@@ -239,5 +239,10 @@ namespace QUANLYTHUVIEN
                 Application.Exit();
             }
         }
+
+        private void addUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

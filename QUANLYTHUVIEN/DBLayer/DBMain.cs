@@ -12,7 +12,7 @@ namespace QUANLYTHUVIEN.DBLayer
 {
     class DBMain
     {
-        string ConnStr = @"Data Source=DESKTOP-NL6DE10;Initial Catalog=QuanLyThuVien;Integrated Security=True";
+        string ConnStr = @"Data Source=DESKTOP-R5G0N9R\NGUYENTU;Initial Catalog=QuanLyThuVien;Integrated Security=True";
         SqlConnection conn = null;
         SqlCommand comm = null;
         SqlDataAdapter da = null;
