@@ -17,7 +17,8 @@ namespace QUANLYTHUVIEN
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frmMain(0));
-            Application.Run(new frmDangNhap());
+            //Application.Run(new frmDangNhap());
+            Application.Run(new frmDoiMatKhau());
             //Application.Run(new frmNhanVien());
             //Application.Run(new frmMuonSach());
         }
