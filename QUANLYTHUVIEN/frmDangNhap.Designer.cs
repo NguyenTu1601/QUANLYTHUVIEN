@@ -183,7 +183,7 @@
             // 
             this.pictureBox1.BackgroundImage = global::QUANLYTHUVIEN.Properties.Resources.library;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(451, 22);
+            this.pictureBox1.Location = new System.Drawing.Point(462, 22);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(487, 474);
             this.pictureBox1.TabIndex = 6;
