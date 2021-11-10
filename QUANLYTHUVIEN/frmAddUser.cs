@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QUANLYTHUVIEN.BSLayer;
 
 namespace QUANLYTHUVIEN
 {
@@ -74,8 +75,8 @@ namespace QUANLYTHUVIEN
         private bool ktraUser()
         {
             bool f = true;
-
-
+            BLThemUser bLThemUser = new BLThemUser();
+            //bLThemUser.addNewUser(txtUserName, txtPass, ref err);
 
             return f;
         }

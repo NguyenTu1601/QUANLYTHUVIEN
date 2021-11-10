@@ -21,14 +21,27 @@ namespace QUANLYTHUVIEN.BSLayer
             db = new DBMain();
         }
 
-        public void addNewUser(String txtUserName,String txtRePass,ref string err)
+        public bool addNewUser(String txtUserName,String txtRePass,ref String err)
         {
             string sqlString = "Insert Into User(ID,Password,PhanQuyen) Values(" + "'" +
                 txtUserName + "','" +
                 txtRePass + "','1')";
-            db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
+            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
 
+        public bool isExist(String txtUserName, ref String err)
+        {
+
+            string sqlString = "selece * from UserName where ID= ' " + txtUserName + "')";
+            
+            DataTable ktra = db.GetDataTable(sqlString,CommandType.Text, ref err);
+
+            if (ktra.Rows.Count > 0) 
+            {
+                return true;
+            }    
+            return false;
+        }
 
     }
 }
