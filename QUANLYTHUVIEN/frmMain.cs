@@ -239,11 +239,7 @@ namespace QUANLYTHUVIEN
 
         private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
         {
-            DialogResult dialog = MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dialog == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
+            
         }
 
         private void addUserToolStripMenuItem_Click(object sender, EventArgs e)
@@ -262,6 +258,15 @@ namespace QUANLYTHUVIEN
         {
             Form xoaUser = new frmDeleteUser();
             xoaUser.ShowDialog();   
+        }
+
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //DialogResult dialog = MessageBox.Show("Bạn có muốn thoát không??", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            //if (dialog == DialogResult.Yes)
+            //{
+            //    Application.Exit();
+            //}
         }
     }
 }
