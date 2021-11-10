@@ -20,5 +20,15 @@ namespace QUANLYTHUVIEN.BSLayer
         {
             db = new DBMain();
         }
+
+        public void addNewUser(String txtUserName,String txtRePass,ref string err)
+        {
+            string sqlString = "Insert Into User(ID,Password,PhanQuyen) Values(" + "'" +
+                txtUserName + "','" +
+                txtRePass + "','1')";
+            db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
+        }
+
+
     }
 }

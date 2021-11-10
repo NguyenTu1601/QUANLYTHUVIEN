@@ -56,7 +56,14 @@ namespace QUANLYTHUVIEN
                         }
                         else
                         {
+                            if (ktraUser() == false) 
+                            {
+                                MessageBox.Show("Tên đăng nhập đã tồn tại!", "Thông báo", MessageBoxButtons.OK);
+                            }
+                            else
+                            {
 
+                            }    
                         }
                     }
                 }
@@ -71,14 +78,6 @@ namespace QUANLYTHUVIEN
 
 
             return f;
-        }
-
-        private void addNewUser(ref string err)
-        {
-            string sqlString = "Insert Into User(ID,Password,PhanQuyen) Values(" + "'" +
-                txtUserName + "','" +
-                txtRePass + "','1')";
-            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
 
         private void txtPass_TextChanged(object sender, EventArgs e)
