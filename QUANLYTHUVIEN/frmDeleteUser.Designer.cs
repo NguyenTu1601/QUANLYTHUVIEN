@@ -62,6 +62,7 @@
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(240, 20);
             this.txtUser.TabIndex = 1;
+            this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
             // 
             // btnDelete
             // 
@@ -71,6 +72,7 @@
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnHuy
             // 
@@ -80,6 +82,7 @@
             this.btnHuy.TabIndex = 4;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // label2
             // 

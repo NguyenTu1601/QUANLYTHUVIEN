@@ -22,6 +22,7 @@ namespace QUANLYTHUVIEN
             //Application.Run(new frmDoiMatKhau());
             //Application.Run(new frmNhanVien());
             //Application.Run(new frmMuonSach());
+            //Application.Run(new frmDeleteUser());
         }
     }
 }

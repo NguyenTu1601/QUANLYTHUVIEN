@@ -260,7 +260,8 @@ namespace QUANLYTHUVIEN
 
         private void xoaUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Form xoaUser = new frmDeleteUser();
+            xoaUser.ShowDialog();   
         }
     }
 }
