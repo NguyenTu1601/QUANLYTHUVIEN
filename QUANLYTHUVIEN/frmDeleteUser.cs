@@ -42,6 +42,9 @@ namespace QUANLYTHUVIEN
                 {
                     BLDeleteUser bLDeleteUser = new BLDeleteUser();
                     bLDeleteUser.deleteUser(txtUser.Text, ref err);
+                    MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK);
+                    txtUser.Text = "";
+                    txtUser.Focus();
                 }
             }
         }
