@@ -23,7 +23,7 @@ namespace QUANLYTHUVIEN
         {
             DialogResult dialog = MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialog == DialogResult.Yes)
-                this.Hide();
+                this.Close();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

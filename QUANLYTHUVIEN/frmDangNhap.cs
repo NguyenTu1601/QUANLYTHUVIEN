@@ -89,7 +89,11 @@ namespace QUANLYTHUVIEN
         {
             DialogResult dialog = MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialog == DialogResult.Yes)
-                Application.Exit();
+            {
+                this.Close();
+                //Application.Exit();
+                
+            }
             else if (dialog == DialogResult.No)
             {
                 //
@@ -154,6 +158,16 @@ namespace QUANLYTHUVIEN
 
             pictureUser.BackgroundImage = Properties.Resources.icon_user_white;
             pictureBox2.BackColor = Color.White;
+        }
+
+        private void frmDangNhap_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
+        }
+
+        private void frmDangNhap_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

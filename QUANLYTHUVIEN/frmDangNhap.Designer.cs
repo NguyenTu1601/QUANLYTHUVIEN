@@ -202,6 +202,8 @@
             this.Name = "frmDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDangNhap_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmDangNhap_FormClosed);
             this.Load += new System.EventHandler(this.frmDangNhap_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
