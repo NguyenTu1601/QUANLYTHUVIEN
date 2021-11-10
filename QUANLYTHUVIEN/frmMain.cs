@@ -248,7 +248,8 @@ namespace QUANLYTHUVIEN
 
         private void addUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Form addUser = new frmAddUser();
+            addUser.ShowDialog();
         }
 
         private void doiMatKhauToolStripMenuItem1_Click(object sender, EventArgs e)
