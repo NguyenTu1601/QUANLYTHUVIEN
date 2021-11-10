@@ -23,7 +23,7 @@ namespace QUANLYTHUVIEN.BSLayer
 
         public bool addNewUser(String txtUserName,String txtRePass,ref String err)
         {
-            string sqlString = "Insert Into User(ID,Password,PhanQuyen) Values(" + "'" +
+            string sqlString = "Insert Into UserName(ID,Password,PhanQuyen) Values(" + "'" +
                 txtUserName + "','" +
                 txtRePass + "','1')";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
@@ -32,7 +32,7 @@ namespace QUANLYTHUVIEN.BSLayer
         public bool isExist(String txtUserName, ref String err)
         {
 
-            string sqlString = "selece * from UserName where ID= ' " + txtUserName + "')";
+            string sqlString = "select * from UserName where ID = '" + txtUserName + "'";
             
             DataTable ktra = db.GetDataTable(sqlString,CommandType.Text, ref err);
 

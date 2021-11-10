@@ -17,7 +17,7 @@ namespace QUANLYTHUVIEN
         {
             InitializeComponent();
         }
-
+        string err;
         private void btnHuy_Click(object sender, EventArgs e)
         {
             DialogResult dialog = MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -57,13 +57,21 @@ namespace QUANLYTHUVIEN
                         }
                         else
                         {
-                            if (ktraUser() == false) 
+                            if (ktraTonTai() == true) 
                             {
                                 MessageBox.Show("Tên đăng nhập đã tồn tại!", "Thông báo", MessageBoxButtons.OK);
                             }
                             else
                             {
+                                addUser();
+                                MessageBox.Show("Tài Khoản đã được thêm!", "Thông báo", MessageBoxButtons.OK);
 
+                                txtUserName.Text = "";
+                                txtPass.Text = "";
+                                txtRePass.Text = "";
+
+                                txtUserName.Focus();
+                                //this.Hide();
                             }    
                         }
                     }
@@ -72,13 +80,20 @@ namespace QUANLYTHUVIEN
 
         }
         //ktra user đã có chưa
-        private bool ktraUser()
+        private bool ktraTonTai()
         {
-            bool f = true;
+            bool f ;
             BLThemUser bLThemUser = new BLThemUser();
-            //bLThemUser.addNewUser(txtUserName, txtPass, ref err);
+            f = bLThemUser.isExist(txtUserName.Text, ref err);
 
             return f;
+        }
+
+        private void addUser()
+        {
+            bool f;
+            BLThemUser bLThemUser = new BLThemUser();
+            f = bLThemUser.addNewUser(txtUserName.Text, txtPass.Text, ref err);
         }
 
         private void txtPass_TextChanged(object sender, EventArgs e)
