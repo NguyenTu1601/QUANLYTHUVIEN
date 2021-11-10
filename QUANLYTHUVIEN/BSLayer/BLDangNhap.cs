@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 // TRUYEN NE
+// Truyen cc
 using System.Data;
 using System.Data.SqlClient;
 
