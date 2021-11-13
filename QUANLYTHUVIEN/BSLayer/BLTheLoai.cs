@@ -42,6 +42,7 @@ namespace QUANLYTHUVIEN.BSLayer
             //string sqlString = "Update TheLoai Set TenTL = N'" +
             //    TenTheLoai + "' Where MaTL='" + MaTheLoai + "' ";
             //return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
+            //sdpfijdlds
         }
     }
 }
