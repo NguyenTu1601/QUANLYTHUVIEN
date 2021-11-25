@@ -67,9 +67,15 @@ namespace QUANLYTHUVIEN
             try
             {
                 BLTheLoai BLTL = new BLTheLoai();
-                BLTL.ThemTheLoai(this.txtMaTL.Text, this.txtTenTL.Text, ref err);
-                Load_Data();
-                MessageBox.Show("Đã thêm xong!");
+                bool add = BLTL.ThemTheLoai(this.txtMaTL.Text, this.txtTenTL.Text, ref err);
+
+                if (add == true)
+                {
+                    Load_Data();
+                    MessageBox.Show("Đã thêm xong!");
+                }
+                else
+                    MessageBox.Show("Không thể thêm mới!\nMã thể loại đã tồn tại");
             }
             catch(SqlException)
             {

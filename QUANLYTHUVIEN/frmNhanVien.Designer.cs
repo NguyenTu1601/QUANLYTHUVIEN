@@ -57,6 +57,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbNam = new System.Windows.Forms.Label();
+            this.lbNu = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataNhanVien)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -100,10 +102,9 @@
             this.radioNu.Location = new System.Drawing.Point(372, 116);
             this.radioNu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioNu.Name = "radioNu";
-            this.radioNu.Size = new System.Drawing.Size(44, 21);
+            this.radioNu.Size = new System.Drawing.Size(14, 13);
             this.radioNu.TabIndex = 2;
             this.radioNu.TabStop = true;
-            this.radioNu.Text = "Nữ";
             this.radioNu.UseVisualStyleBackColor = true;
             // 
             // radioNam
@@ -112,10 +113,9 @@
             this.radioNam.Location = new System.Drawing.Point(244, 116);
             this.radioNam.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioNam.Name = "radioNam";
-            this.radioNam.Size = new System.Drawing.Size(54, 21);
+            this.radioNam.Size = new System.Drawing.Size(14, 13);
             this.radioNam.TabIndex = 2;
             this.radioNam.TabStop = true;
-            this.radioNam.Text = "Nam";
             this.radioNam.UseVisualStyleBackColor = true;
             // 
             // txtSDT
@@ -329,6 +329,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.panel1.Controls.Add(this.lbNu);
+            this.panel1.Controls.Add(this.lbNam);
             this.panel1.Controls.Add(this.dateNgaySinh);
             this.panel1.Controls.Add(this.radioNu);
             this.panel1.Controls.Add(this.radioNam);
@@ -347,6 +349,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1028, 162);
             this.panel1.TabIndex = 3;
+            // 
+            // lbNam
+            // 
+            this.lbNam.AutoSize = true;
+            this.lbNam.Location = new System.Drawing.Point(265, 114);
+            this.lbNam.Name = "lbNam";
+            this.lbNam.Size = new System.Drawing.Size(36, 17);
+            this.lbNam.TabIndex = 4;
+            this.lbNam.Text = "Nam";
+            // 
+            // lbNu
+            // 
+            this.lbNu.AutoSize = true;
+            this.lbNu.Location = new System.Drawing.Point(392, 114);
+            this.lbNu.Name = "lbNu";
+            this.lbNu.Size = new System.Drawing.Size(26, 17);
+            this.lbNu.TabIndex = 4;
+            this.lbNu.Text = "Nữ";
             // 
             // frmNhanVien
             // 
@@ -399,5 +419,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnCapNhat;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lbNu;
+        private System.Windows.Forms.Label lbNam;
     }
 }

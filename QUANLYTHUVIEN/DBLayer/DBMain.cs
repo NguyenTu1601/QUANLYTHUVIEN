@@ -12,7 +12,7 @@ namespace QUANLYTHUVIEN.DBLayer
 {
     public class DBMain
     {
-        string ConnStr = @"Data Source=DESKTOP-R5G0N9R\NGUYENTU;Initial Catalog=QuanLyThuVien;Integrated Security=True";
+        string ConnStr = @"Data Source=DESKTOP-NL6DE10;Initial Catalog=QuanLyThuVien1;Integrated Security=True";
         SqlConnection conn = null;
         SqlCommand comm = null;
         SqlDataAdapter da = null;
@@ -85,7 +85,11 @@ namespace QUANLYTHUVIEN.DBLayer
                 comm.Parameters.Add(p);
             try
             {
-                comm.ExecuteNonQuery();
+                int result = comm.ExecuteNonQuery();
+                // result == -1 => truy vấn SQL không trả về kết qủa nào (Không thể INSERT, UPDATE,DEL)
+                if (result == -1)
+                    f = false;
+                else
                 f = true;
             }
             catch (SqlException ex)

@@ -76,9 +76,15 @@ namespace QUANLYTHUVIEN
             //thực hiện lệnh
             BLDanhMucSach blDMS = new BLDanhMucSach();
             DateTime ngayMua = DateTime.Parse(this.dateNgayMua.Text);
-            blDMS.ThemSach(this.txtMaSach.Text, this.cboxMaTL.Text, this.txtTenSach.Text, this.txtTacGia.Text, this.txtNhaXB.Text, ngayMua, this.txtTonTai.Text, this.txtSoLanMuon.Text, ref err);
-            Load_Data();
-            MessageBox.Show("Đã thêm xong :>");
+            bool add = blDMS.ThemSach(this.txtMaSach.Text, this.cboxMaTL.Text, this.txtTenSach.Text, this.txtTacGia.Text, this.txtNhaXB.Text, ngayMua, this.txtTonTai.Text, this.txtSoLanMuon.Text, ref err);
+
+            if (add == true)
+            {
+                Load_Data();
+                MessageBox.Show("Đã thêm xong :>");
+            }
+            else
+                MessageBox.Show("Không thể thêm mới!\nMã sách đã tồn tại!");
         }
 
         private void btnXoa_Click(object sender, EventArgs e)

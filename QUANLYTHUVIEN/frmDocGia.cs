@@ -65,10 +65,14 @@ namespace QUANLYTHUVIEN
                 BLDocGia BLDG = new BLDocGia();
                 DateTime ngaySinh = DateTime.Parse(this.dateNgaySinh.Text);
 
-                BLDG.ThemDocGia(this.txtMaDG.Text, this.txtHoTen.Text, GioiTinh, ngaySinh, this.txtDiaChi.Text, this.txtSDT.Text,this.txtEmail.Text, ref err);
+                bool add = BLDG.ThemDocGia(this.txtMaDG.Text, this.txtHoTen.Text, GioiTinh, ngaySinh, this.txtDiaChi.Text, this.txtSDT.Text,this.txtEmail.Text, ref err);
 
                 Load_Data();
-                MessageBox.Show("Đã thêm xong!");
+
+                if (add == true)
+                    MessageBox.Show("Đã thêm xong!");
+                else
+                    MessageBox.Show("Không thể thêm mới!\nMã độc giả đã tồn tại!");
             }
             catch (SqlException)
             {
@@ -118,6 +122,7 @@ namespace QUANLYTHUVIEN
                 BLDocGia BLDG = new BLDocGia();
                 DateTime ngaySinh = DateTime.Parse(this.dateNgaySinh.Text);
                 BLDG.CapNhatDocGia(this.txtMaDG.Text, this.txtHoTen.Text, GioiTinh, ngaySinh, this.txtDiaChi.Text.Trim(), this.txtSDT.Text,this.txtEmail.Text, ref err);
+
                 Load_Data();
                 MessageBox.Show("Đã sửa xong!");
             }

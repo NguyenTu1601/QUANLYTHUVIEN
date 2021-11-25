@@ -66,10 +66,16 @@ namespace QUANLYTHUVIEN
                                   //
                 BLNhanVien blNV = new BLNhanVien();
                 DateTime ngaySinh = DateTime.Parse(this.dateNgaySinh.Text);
-                blNV.ThemNhanVien(this.txtMaNV.Text, this.txtHoTen.Text, GioiTinh, ngaySinh, this.txtDiaChi.Text, this.txtSDT.Text, ref err);
-                
-                Load_Data();
-                MessageBox.Show("Đã thêm xong!");
+                bool b = blNV.ThemNhanVien(this.txtMaNV.Text, this.txtHoTen.Text, GioiTinh, ngaySinh, this.txtDiaChi.Text, this.txtSDT.Text, ref err);
+
+                if (b == true)
+                {
+                    Load_Data();
+                    MessageBox.Show("Đã thêm xong!");
+                }
+                else
+                    MessageBox.Show("Không thể thêm mới! \nMã nhân viên đã tồn tại!!");
+
             }
             catch (SqlException)
             {
