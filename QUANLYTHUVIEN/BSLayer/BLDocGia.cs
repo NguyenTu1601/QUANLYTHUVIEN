@@ -26,7 +26,8 @@ namespace QUANLYTHUVIEN.BSLayer
         }
 
         //Thêm đọc giả 
-        public bool ThemDocGia(string MaDocGia, string HoTen, int GioiTinh, DateTime NgaySinh, string DiaChi, string SDT, string Email, ref string err)
+        public bool ThemDocGia(string MaDocGia, string HoTen, int GioiTinh, DateTime NgaySinh, 
+            string DiaChi, string SDT, string Email, ref string err)
         {
             return db.MyExecuteNonQuery("spThemDocGia", CommandType.StoredProcedure, ref err,
               new SqlParameter("@MaDG", MaDocGia), new SqlParameter("@Hoten", HoTen),
@@ -50,7 +51,8 @@ namespace QUANLYTHUVIEN.BSLayer
             return db.MyExecuteNonQuery("spXoaDOcGia_TheoMa", CommandType.StoredProcedure, ref err,
                new SqlParameter("@MaDG", MaDocGia));
         }
-        public bool CapNhatDocGia(string MaDocGia, string HoTen, string GioiTinh, DateTime NgaySinh, string DiaChi, string SDT, string Email, ref string err)
+        public bool CapNhatDocGia(string MaDocGia, string HoTen, string GioiTinh, DateTime NgaySinh, 
+            string DiaChi, string SDT, string Email, ref string err)
         {
             return db.MyExecuteNonQuery("spCapNhatDocGia", CommandType.StoredProcedure, ref err,
               new SqlParameter("@MaDG", MaDocGia), new SqlParameter("@Hoten", HoTen),

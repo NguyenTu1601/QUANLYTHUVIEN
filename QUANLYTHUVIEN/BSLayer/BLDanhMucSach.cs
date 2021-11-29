@@ -24,7 +24,8 @@ namespace QUANLYTHUVIEN.BSLayer
         {
             return db.ExecuteQueryDataSet("select * from viewSach", CommandType.Text);
         }
-        public bool ThemSach(string MaSach, string MaTheLoai, string TenSach, string TacGia, string NXB, DateTime NgayMua,string Ton,string SoLanMuon, ref string err)
+        public bool ThemSach(string MaSach, string MaTheLoai, string TenSach, string TacGia, string NXB, DateTime NgayMua,
+            string Ton,string SoLanMuon, ref string err)
         {
             return db.MyExecuteNonQuery("spThemSach", CommandType.StoredProcedure, ref err,
                new SqlParameter("@maSach", MaSach), new SqlParameter("@maTL", MaTheLoai),
@@ -42,7 +43,8 @@ namespace QUANLYTHUVIEN.BSLayer
         }
 
         //Cập nhật sách
-        public bool CapNhatSach(string MaSach, string MaTheLoai, string TenSach, string TacGia, string NXB, DateTime NgayMua, string Ton,string SoLanMuon, ref string err)
+        public bool CapNhatSach(string MaSach, string MaTheLoai, string TenSach, string TacGia, 
+            string NXB, DateTime NgayMua, string Ton,string SoLanMuon, ref string err)
         {
                 return db.MyExecuteNonQuery("spCapNhatSach", CommandType.StoredProcedure, ref err,
                  new SqlParameter("@maSach", MaSach), new SqlParameter("@maTL", MaTheLoai),
